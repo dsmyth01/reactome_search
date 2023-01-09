@@ -1,0 +1,5 @@
+jina==3.7.7
+nltk==3.7
+requests==2.28.1
+sentence_transformers==2.2.2
+torch==1.12.1

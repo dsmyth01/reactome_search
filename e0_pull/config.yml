@@ -1,0 +1,4 @@
+jtype: PullExecutor
+py_modules:
+  - reactome_data_script.py
+  - pull_executor.py

@@ -1,0 +1,43 @@
+jtype: Flow
+version: '1'
+with:
+  restful: true
+executors:
+- name: e0_pull
+  polling: "ANY"
+  uses: e0_pull/config.yml
+  port: 51756
+  upload_files:
+  - e0_pull/config.yml
+  port_monitoring: 62644
+- name: e1_cleanup
+  polling: "ANY"
+  uses: e1_cleanup/config.yml
+  port: 49580
+  upload_files:
+  - e1_cleanup/config.yml
+  port_monitoring: 61378
+- name: e2_split
+  polling: "ANY"
+  uses: e2_split/config.yml
+  port: 53315
+  upload_files:
+  - e2_split/config.yml
+  port_monitoring: 55290
+- name: e3_embed
+  polling: "ANY"
+  uses: e3_embed/config.yml
+  uses_with:
+    device: cpu
+  port: 62018
+  upload_files:
+  - e3_embed/config.yml
+  replicas: 5
+  port_monitoring: 60423
+- name: e4_search
+  polling: "ANY"
+  uses: e4_search/config.yml
+  port: 51592
+  upload_files:
+  - e4_search/config.yml
+  port_monitoring: 56102

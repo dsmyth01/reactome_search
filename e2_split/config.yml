@@ -1,0 +1,4 @@
+jtype: SplitExecutor
+metas:
+  py_modules:
+    - split_executor.py

@@ -1,0 +1,4 @@
+jtype: EmbedExecutor
+metas:
+  py_modules:
+    - embed_executor.py
